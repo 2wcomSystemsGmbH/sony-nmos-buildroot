@@ -21,18 +21,15 @@ TAG=${TAG_GREEN}
 # Check if $work has been defined.
 if [ -z ${work}  ]
     then 
+    export work=/home/entwickler/Development/workspace/sony-nmos-buildroot
+fi
+if [ -z ${work}  ]
+    then 
     echo -e "${TAG_ERROR} You must define the \$work environment variable setup before running this script." 
     echo -e "${TAG_ERROR} This variable is simply a pointer to the project root directory. For example,"
     echo -e "${TAG_ERROR} If your project resides in /home/biff/source/myproj, then \$work would be set"
     echo -e "${TAG_ERROR} to /home/biff/source/myproj"
     echo -e "${TAG_ERROR} the Script will abort."
-    exit 1
-fi
-
-# Check if the os as been built (If the OS was built previously, then at least the sdcard.img file should exist)
-if [ ! -f $work/os/buildroot/output/images/sdcard.img ]; then
-    echo -e "${TAG_ERROR} It appears that OS and files system has not been build."
-    echo -e "${TAG_ERROR} Please run ${work}/scripts/build.os script."
     exit 1
 fi
 
@@ -62,14 +59,3 @@ cp ${NMOS_EXEC_SOURCE}/nmos-cpp-node ${TARGET_ROOT_USER}
 cp ${NMOS_EXEC_SOURCE}/nmos-cpp-registry ${TARGET_ROOT_USER}
 cp ${NMOS_EXEC_SOURCE}/nmos-cpp-test ${TARGET_ROOT_USER}
 
-# Recreate file-system
-echo -e "${TAG} Invoking Buildroot to recreate the new disk image..."
-cd $work/os/buildroot
-# Note: do not use the -j option here, butildroot does this automatically
-make
-if [ $? -ne 0 ]; then
-    echo -e "${TAG_ERROR} Could not recreate the disk image"
-    exit -1
-fi
-
-echo -e "${TAG} Done. Now you can create your sdcard image."

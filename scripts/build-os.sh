@@ -57,7 +57,7 @@ git clone git://git.buildroot.net/buildroot
 
 cd $work/os/buildroot
 # Checkout specific version
-BUILDROOT_TAG=2020.05-rc1
+BUILDROOT_TAG=2022.02-rc2
 echo -e "${TAG} Checkout tag ${BUILDROOT_TAG}..."
 git checkout ${BUILDROOT_TAG}
 
@@ -69,7 +69,7 @@ cp -r $work/os/patches/buildroot/* $work/os/buildroot/
 # Setup the environment
 echo -e "${TAG} Setup buildroot to use the raspberry pi 3 with our custom config..."
 cd $work/os/buildroot
-make sony_nmos_rpi3_defconfig
+make solidrun_clearfog_defconfig
 
 # Build the OS
 echo -e "${TAG} Building buildroot..."
