@@ -5,6 +5,10 @@
 # Check if $work has been defined.
 if [ -z ${work}  ]
     then 
+    export work=/home/entwickler/Development/workspace/sony-nmos-buildroot
+fi
+if [ -z ${work}  ]
+    then 
     echo -e "You must define the \$work environment variable setup before running this script." 
     echo -e "This variable is simply a pointer to the project root directory. For example,"
     echo -e "If your project resides in /home/biff/source/myproj, then \$work would be set"
