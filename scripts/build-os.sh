@@ -73,7 +73,9 @@ cp -r $work/os/patches/buildroot/* $work/os/buildroot/
 # Setup the environment
 echo -e "${TAG} Setup buildroot to use the raspberry pi 3 with our custom config..."
 cd $work/os/buildroot
-make solidrun_clearfog_defconfig
+cp ../../../../buildroot-ip4c.config .config
+cp ../../../../buildroot-ip4c.config .defconfig
+make menuconfig
 
 # Build the OS
 echo -e "${TAG} Building buildroot..."

@@ -9,4 +9,4 @@ add_subdirectory(libs)
 add_subdirectory(libs-ext)
 
 # Add individual projects
-add_subdirectory(sandbox)
+#add_subdirectory(sandbox)
