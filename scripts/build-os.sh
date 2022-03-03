@@ -61,7 +61,7 @@ git clone git://git.buildroot.net/buildroot
 
 cd $work/os/buildroot
 # Checkout specific version
-BUILDROOT_TAG=2022.02-rc2
+BUILDROOT_TAG=2022.02-rc3
 echo -e "${TAG} Checkout tag ${BUILDROOT_TAG}..."
 git checkout ${BUILDROOT_TAG}
 
@@ -73,8 +73,8 @@ cp -r $work/os/patches/buildroot/* $work/os/buildroot/
 # Setup the environment
 echo -e "${TAG} Setup buildroot to use the raspberry pi 3 with our custom config..."
 cd $work/os/buildroot
-cp ../../../../buildroot-ip4c.config .config
-cp ../../../../buildroot-ip4c.config .defconfig
+cp $work/buildroot-nmos.config .config
+cp $work/buildroot-nmos.config .defconfig
 make menuconfig
 
 # Build the OS
