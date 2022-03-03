@@ -3,10 +3,10 @@ cd /home/entwickler/Development/workspace/buildroot
 if [ -z "$1" ]
 then
 	make clean
-	cp ../sony-nmos-buildroot/buildroot-ip4c.Config.in Config.in
+	cp ../sony-nmos-buildroot/buildroot-nmos.Config.in Config.in
 fi
-cp ../sony-nmos-buildroot/buildroot-ip4c.config .config
-cp ../sony-nmos-buildroot/buildroot-ip4c.config .defconfig
+cp ../sony-nmos-buildroot/buildroot-nmos.config .config
+cp ../sony-nmos-buildroot/buildroot-nmos.config .defconfig
 if [ -z "$1" ]
 then
 	make menuconfig
