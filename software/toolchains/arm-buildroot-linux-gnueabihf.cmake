@@ -4,7 +4,7 @@ set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 SET(CMAKE_SYSTEM_VERSION 4.1)
 
-set(tools /home/entwickler/Development/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf)
+set(tools /home/entwickler/Development/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf)
 set(CMAKE_C_COMPILER ${tools}/bin/arm-linux-gnueabihf-gcc)
 set(CMAKE_CXX_COMPILER ${tools}/bin/arm-linux-gnueabihf-g++)
 
