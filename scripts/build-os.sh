@@ -57,11 +57,11 @@ echo -e "${TAG} Cloning buildroot..."
 # Get buildroot
 echo -e "${TAG} Cloning buildroot from git.buildroot.net..."
 cd $work/os
-git clone git://git.buildroot.net/buildroot
+git clone git://git.buildroot.net/buildroot --depth=1 --branch=2020.02.11 buildroot
 
 cd $work/os/buildroot
 # Checkout specific version
-BUILDROOT_TAG=2022.02-rc3
+BUILDROOT_TAG=2022.02.11
 echo -e "${TAG} Checkout tag ${BUILDROOT_TAG}..."
 git checkout ${BUILDROOT_TAG}
 
@@ -76,6 +76,8 @@ cd $work/os/buildroot
 cp $work/buildroot-nmos.config .config
 cp $work/buildroot-nmos.config .defconfig
 make menuconfig
+
+echo -e "XXXXXXXXXXXXXXXX ToDo: mkdir ${work}/os/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/include (but path arm-buildroot-linux are created inside make!"
 
 # Build the OS
 echo -e "${TAG} Building buildroot..."
