@@ -14,7 +14,7 @@ endif()
 set(NMOS_CPP_DIR ${PROJECT_SOURCE_DIR}/../libs-ext/nmos-cpp/Development)
 
 # We need boost for nmos-cpp.
-find_package(Boost 1.45.0 COMPONENTS system date_time filesystem regex)
+find_package(Boost 1.72.0 COMPONENTS system date_time filesystem regex)
 
 # since std::shared_mutex is not available until C++17
 list(APPEND FIND_BOOST_COMPONENTS thread)

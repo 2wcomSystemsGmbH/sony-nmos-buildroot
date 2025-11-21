@@ -55,7 +55,7 @@ fi
 echo -e "${TAG} Installing executables..."
 TARGET_ROOT_USER=${work}/os/buildroot/rootfs-overlay/root
 NMOS_EXEC_SOURCE=${work}/sony-nmosBuild/sony-nmos_release/libs-ext/nmos-cpp/Development
-cp ${NMOS_EXEC_SOURCE}/nmos-cpp-node ${TARGET_ROOT_USER}
-cp ${NMOS_EXEC_SOURCE}/nmos-cpp-registry ${TARGET_ROOT_USER}
-cp ${NMOS_EXEC_SOURCE}/nmos-cpp-test ${TARGET_ROOT_USER}
+#cp ${NMOS_EXEC_SOURCE}/nmos-cpp-node ${TARGET_ROOT_USER}
+#cp ${NMOS_EXEC_SOURCE}/nmos-cpp-registry ${TARGET_ROOT_USER}
+#cp ${NMOS_EXEC_SOURCE}/nmos-cpp-test ${TARGET_ROOT_USER}
 
