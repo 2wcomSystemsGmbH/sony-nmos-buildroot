@@ -13,7 +13,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-set(BOOST_INCLUDEDIR /home/entwickler/Development/workspace/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include)
+#set(BOOST_INCLUDEDIR /home/entwickler/Development/workspace/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include)
 set(Boost_INCLUDE_DIRS /home/entwickler/Development/workspace/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include)
 set(Boost_LIBRARY_DIRS /home/entwickler/Development/workspace/buildroot/output/target/usr/lib)
 set(CPPREST_INCLUDE_DIR /home/entwickler/Development/workspace/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include)
